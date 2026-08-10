@@ -409,37 +409,19 @@ against the Veeam console and the actual infrastructure.
 
 <h3>Veeam Backup & Replication</h3>
 
-<pre><code>.\Audit-VBR.ps1</code></pre>
+<pre><code>.\Invoke-VBRAudit.ps1</code></pre>
 
 <h3>Veeam Backup for Microsoft 365</h3>
 
-<pre><code>.\Audit-VB365.ps1</code></pre>
+<pre><code>.\Invoke-VB365Audit.ps1</code></pre>
 
 <p>
 Run the scripts from a PowerShell session with sufficient permissions to
 query the Veeam configuration.
 </p>
-
-<hr>
-
-<h2>📁 Repository Structure</h2>
-
-<pre><code>.
-├── VBR/
-│   ├── Audit-VBR.ps1
-│   └── README.md
-│
-├── VB365/
-│   ├── Audit-VB365.ps1
-│   └── README.md
-│
-├── Output/
-│   ├── CSV/
-│   └── HTML/
-│
-└── README.md
-</code></pre>
-
+<p>
+<strong>⚠️ Important: MFA must be disabled for the user using this script.</strong>
+</p>
 <hr>
 
 <h2>⚙️ Requirements</h2>
@@ -509,7 +491,7 @@ query the Veeam configuration.
 </tr>
 <tr>
 <td><strong>Veeam Backup for Microsoft 365</strong></td>
-<td>Supported versions</td>
+<td>8.x</td>
 <td>🟢 Supported</td>
 </tr>
 </tbody>
@@ -561,58 +543,16 @@ without reviewing and anonymizing sensitive information.</strong>
 
 <hr>
 
-<h2>💡 Project Philosophy</h2>
-
-<p>
-The project was built around a simple question:
-</p>
-
-<blockquote>
-<strong>
-"If I take over a Veeam environment I don't know,
-what information do I need to quickly understand its configuration?"
-</strong>
-</blockquote>
-
-<p>
-The scripts therefore focus on:
-</p>
-
-<table>
-<tr>
-<td align="center">🤖<br><strong>Automation</strong></td>
-<td align="center">📖<br><strong>Readability</strong></td>
-<td align="center">🔄<br><strong>Reproducibility</strong></td>
-<td align="center">🧩<br><strong>Compatibility</strong></td>
-</tr>
-<tr>
-<td align="center">📊<br><strong>Structured data</strong></td>
-<td align="center">🔎<br><strong>Assessment</strong></td>
-<td align="center">⚠️<br><strong>Health checks</strong></td>
-<td align="center">📚<br><strong>Documentation</strong></td>
-</tr>
-</table>
-
-<p>
-The objective is to provide a practical toolkit for
-<strong>Veeam administrators, infrastructure engineers and consultants</strong>.
-</p>
-
-<hr>
-
 <h2>🗺️ Roadmap</h2>
 
 <ul>
-<li>⬜ Extended Veeam version compatibility</li>
+<li>⬜ Extended Veeam version compatibility as new version are released</li>
 <li>⬜ Additional configuration checks</li>
-<li>⬜ More automated health checks</li>
-<li>⬜ Audit comparison between two environments</li>
-<li>⬜ Enhanced HTML reporting</li>
-<li>⬜ JSON export</li>
-<li>⬜ Excel export</li>
-<li>⬜ Multi-server audit mode</li>
+<li>⬜ Audit comparison between two environments or older audit from the same environnement</li>
+<li>⬜ Enhanced HTML reporting (filter and so on)</li>
 <li>⬜ Audit history</li>
 <li>⬜ Extended VB365 configuration analysis</li>
+<li>⬜ More languages</li>
 </ul>
 
 <hr>
@@ -669,7 +609,7 @@ publishing it.
 <h2>📜 License</h2>
 
 <p>
-License to be defined.
+License to be defined. But free for use :).
 </p>
 
 <hr>
